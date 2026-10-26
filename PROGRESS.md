@@ -14,8 +14,20 @@
   timestamps (seqlock, monotonic across stream reopen); lock-free SPSC event queue; process-lifecycle
   pause/resume. `tools/prepare_samples.py` prepares recorded samples.
 
+- **Phase 2 — music theory** (`core-music`): `Pitch` (MIDI/Hz/names), `Tuning` (Standard, Drop D,
+  Open G, Half-step down), `frequencyFor(string, fret, tuning)`, 24-chord `ChordLibrary` as data,
+  `Fretboard` geometry. Every chord's tones, bass note and every string/fret frequency is unit tested.
+- **Phase 3 — play screen**: Canvas guitar (spruce grain, rosewood fretboard with real fret spacing
+  and inlays, mosaic rosette, bridge, six strings of graded gauge) with decaying standing-wave
+  vibration; multi-touch `StrumDetector` (segment crossing so fast swipes never skip strings,
+  6–12 ms spacing, velocity from speed, hysteresis against jitter); taps pluck; chord column with
+  long-press swap (persisted in DataStore); muted-string X / open-string O / finger dots; free-fret
+  mode with held frets used by strums; haptic ticks; left-handed mirroring; immersive fullscreen.
+  `EngineSettingsSync` applies volume/tuning/sound type. DataStore settings repo landed early
+  (needed for chord slots).
+
 ## Next
-- Phase 2: music theory (core-music).
+- Phase 4: game mode (core-game + UI).
 
 ## Decisions
 - **Builds run on GitHub Actions.** The dev machine is a phone (Termux/proot, no Android SDK),
@@ -38,3 +50,8 @@
   resumes from the same value.
 - No recorded samples ship (none are licensed); "Samples" mode falls back to the synth until
   `assets/samples/<midi>.wav` files are added.
+- Strings run horizontally with low E on top (the player's view looking down at the guitar);
+  neck on the left, chord column on the right (mirrored in left-handed mode).
+- Tapping the selected chord again releases it (open strings). Strumming a muted string damps it.
+- In free-fret mode a finger held on the fretboard also sets the fret for strums on that string, so
+  one hand can fret while the other strums.
