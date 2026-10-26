@@ -5,6 +5,8 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
+import androidx.room.Room
+import com.strumwise.data.scores.StrumwiseDatabase
 import com.strumwise.data.settings.DataStoreSettingsRepository
 import com.strumwise.data.settings.SettingsRepository
 import dagger.Binds
@@ -26,5 +28,10 @@ abstract class DataModule {
         @Singleton
         fun preferences(@ApplicationContext context: Context): DataStore<Preferences> =
             PreferenceDataStoreFactory.create { context.preferencesDataStoreFile("settings") }
+
+        @Provides
+        @Singleton
+        fun database(@ApplicationContext context: Context): StrumwiseDatabase =
+            Room.databaseBuilder(context, StrumwiseDatabase::class.java, "strumwise.db").build()
     }
 }

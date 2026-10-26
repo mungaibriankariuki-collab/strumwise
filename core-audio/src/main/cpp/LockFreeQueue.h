@@ -54,7 +54,7 @@ struct EngineEvent {
         SetMetronome,
     };
     Type type = Type::NoteOn;
-    int32_t string = 0;
+    int32_t string = 0;         // string index, or beats per bar for SetMetronome
     int32_t fret = 0;
     float value = 0.0f;         // velocity, volume, bpm, or sound type
     int64_t delayFrames = 0;    // NoteOn: frames to wait after the event is dequeued (strum spacing)

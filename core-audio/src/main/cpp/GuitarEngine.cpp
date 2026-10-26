@@ -192,10 +192,11 @@ void GuitarEngine::setSoundType(int type) {
     pushEvent(e);
 }
 
-void GuitarEngine::setMetronome(float bpm, int64_t firstClickNanos) {
+void GuitarEngine::setMetronome(float bpm, int64_t firstClickNanos, int beatsPerBar) {
     EngineEvent e;
     e.type = EngineEvent::Type::SetMetronome;
     e.value = bpm;
+    e.string = std::clamp(beatsPerBar, 1, 12);  // reuses the int field
     e.atNanos = firstClickNanos;
     pushEvent(e);
 }
@@ -355,6 +356,7 @@ void GuitarEngine::handleEvent(const EngineEvent &e) {
             break;
         case EngineEvent::Type::SetMetronome: {
             metronomeBpm_ = e.value;
+            beatsPerBar_ = e.string;
             if (metronomeBpm_ <= 0.0f) break;
             const double rate = static_cast<double>(sampleRate());
             const double interval = rate * 60.0 / metronomeBpm_;
@@ -435,7 +437,7 @@ void GuitarEngine::renderChunk(float *out, int channels, int frames, int64_t sta
 
         // Metronome clicks land on exact stream frames, so they line up with the audio clock.
         if (interval > 0.0 && static_cast<double>(startFrame + i) >= nextClickFrame_) {
-            click_.trigger(clickBeat_ % 4 == 0);
+            click_.trigger(clickBeat_ % beatsPerBar_ == 0);
             nextClickFrame_ += interval;
             ++clickBeat_;
         }

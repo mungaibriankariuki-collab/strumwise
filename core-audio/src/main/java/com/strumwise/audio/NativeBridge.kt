@@ -17,7 +17,7 @@ internal object NativeBridge {
     external fun setMasterVolume(handle: Long, volume: Float)
     external fun setTuning(handle: Long, hz: FloatArray)
     external fun setSoundType(handle: Long, type: Int)
-    external fun setMetronome(handle: Long, bpm: Float, firstClickNanos: Long)
+    external fun setMetronome(handle: Long, bpm: Float, firstClickNanos: Long, beatsPerBar: Int)
     external fun audioTimeNanos(handle: Long, monotonicNowNanos: Long): Long
     external fun sampleRate(handle: Long): Int
     external fun outputLatencyMillis(handle: Long): Double

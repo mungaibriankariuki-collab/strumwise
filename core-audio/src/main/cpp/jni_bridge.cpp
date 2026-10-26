@@ -76,8 +76,8 @@ Java_com_strumwise_audio_NativeBridge_setSoundType(JNIEnv *, jobject, jlong hand
 
 JNIEXPORT void JNICALL
 Java_com_strumwise_audio_NativeBridge_setMetronome(JNIEnv *, jobject, jlong handle, jfloat bpm,
-                                                   jlong firstClickNanos) {
-    engine(handle)->setMetronome(bpm, firstClickNanos);
+                                                   jlong firstClickNanos, jint beatsPerBar) {
+    engine(handle)->setMetronome(bpm, firstClickNanos, beatsPerBar);
 }
 
 JNIEXPORT jlong JNICALL

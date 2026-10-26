@@ -14,9 +14,10 @@ class FakeGuitarEngine : GuitarEngine {
     var volume = 1f
     var lastTuning: FloatArray? = null
     var lastSoundType = SoundType.SYNTH
-    var metronome: Pair<Float, Long>? = null
+    var metronome: Triple<Float, Long, Int>? = null
     var clockNanos = 0L
     override var isRunning = false
+    override var loadedSampleCount = 0
 
     override fun start(): Boolean { isRunning = true; return true }
     override fun stop() { isRunning = false }
@@ -26,7 +27,7 @@ class FakeGuitarEngine : GuitarEngine {
     override fun setMasterVolume(volume: Float) { this.volume = volume }
     override fun setTuning(openStringHz: FloatArray) { lastTuning = openStringHz }
     override fun setSoundType(type: SoundType) { lastSoundType = type }
-    override fun setMetronome(bpm: Float, firstClickNanos: Long) { metronome = bpm to firstClickNanos }
+    override fun setMetronome(bpm: Float, firstClickNanos: Long, beatsPerBar: Int) { metronome = Triple(bpm, firstClickNanos, beatsPerBar) }
     override fun getAudioTimeNanos(): Long = clockNanos
     override fun stats() = EngineStats(isRunning, 48000, 10.0, 0)
     override fun pauseForBackground() {}

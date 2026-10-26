@@ -46,8 +46,11 @@ public:
     void setMasterVolume(float volume);
     void setTuning(const float openStringHz[kStrings]);
     void setSoundType(int type);
-    /** bpm <= 0 turns the metronome off. The first click sounds at `firstClickNanos` (audio clock). */
-    void setMetronome(float bpm, int64_t firstClickNanos);
+    /**
+     * bpm <= 0 turns the metronome off. The first click (a downbeat) sounds at `firstClickNanos` on the
+     * audio clock; every `beatsPerBar`th click is accented.
+     */
+    void setMetronome(float bpm, int64_t firstClickNanos, int beatsPerBar);
     /** Takes ownership and publishes atomically; the previous bank is kept alive until destruction. */
     void setSampleBank(std::unique_ptr<SampleBank> bank);
 
@@ -116,6 +119,7 @@ private:
     float metronomeBpm_ = 0.0f;
     double nextClickFrame_ = 0.0;
     int64_t clickBeat_ = 0;
+    int beatsPerBar_ = 4;
     float mixL_[256] = {};
     float mixR_[256] = {};
     float voiceBuffer_[256] = {};

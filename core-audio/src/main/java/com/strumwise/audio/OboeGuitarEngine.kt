@@ -16,6 +16,9 @@ class OboeGuitarEngine : GuitarEngine {
 
     override val isRunning: Boolean get() = started && !pausedInBackground
 
+    @Volatile override var loadedSampleCount: Int = 0
+        private set
+
     @Synchronized
     override fun start(): Boolean {
         started = true
@@ -57,8 +60,8 @@ class OboeGuitarEngine : GuitarEngine {
 
     override fun setSoundType(type: SoundType) = NativeBridge.setSoundType(handle, type.nativeValue)
 
-    override fun setMetronome(bpm: Float, firstClickNanos: Long) =
-        NativeBridge.setMetronome(handle, bpm, firstClickNanos)
+    override fun setMetronome(bpm: Float, firstClickNanos: Long, beatsPerBar: Int) =
+        NativeBridge.setMetronome(handle, bpm, firstClickNanos, beatsPerBar)
 
     override fun getAudioTimeNanos(): Long = NativeBridge.audioTimeNanos(handle, System.nanoTime())
 
@@ -81,6 +84,7 @@ class OboeGuitarEngine : GuitarEngine {
         val bytes = files.map { (name, _) -> assets.open("$SAMPLE_DIR/$name").use { it.readBytes() } }
         val roots = FloatArray(files.size) { midiToHz(files[it].second) }
         val loaded = NativeBridge.loadSamples(handle, bytes.toTypedArray(), roots)
+        loadedSampleCount = loaded
         Log.i(TAG, "Loaded $loaded/${files.size} guitar samples")
         return loaded
     }

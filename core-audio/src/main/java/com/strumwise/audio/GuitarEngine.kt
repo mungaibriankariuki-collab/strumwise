@@ -26,6 +26,9 @@ data class EngineStats(
 interface GuitarEngine {
     val isRunning: Boolean
 
+    /** Recorded samples available to [SoundType.SAMPLES]; 0 means that mode falls back to the synth. */
+    val loadedSampleCount: Int
+
     /** Opens and starts the audio stream. Returns false if no output stream could be opened. */
     fun start(): Boolean
 
@@ -50,8 +53,12 @@ interface GuitarEngine {
 
     fun setSoundType(type: SoundType)
 
-    /** Starts a click track at [bpm] whose first click sounds at [firstClickNanos] on the audio clock; bpm <= 0 stops it. */
-    fun setMetronome(bpm: Float, firstClickNanos: Long)
+    /**
+     * Starts a click track at [bpm] whose first click (a downbeat) sounds at [firstClickNanos] on the
+     * audio clock, accenting every [beatsPerBar]th click; bpm <= 0 stops it. A start time in the past
+     * joins the beat grid with the right accent phase.
+     */
+    fun setMetronome(bpm: Float, firstClickNanos: Long, beatsPerBar: Int = 4)
 
     /**
      * Monotonic game clock in nanoseconds: how much audio has been *heard* since the engine started,

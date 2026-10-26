@@ -9,8 +9,16 @@ enum class StrumDirection { DOWN, UP }
  * One string being sounded by touch.
  * @param delayMs when to sound it relative to now (strum spacing); 0 for the first string.
  * @param direction null for a tap/pluck.
+ * @param timeMs uptime (SystemClock.uptimeMillis) of the touch event, so the game can judge when
+ *   the finger actually moved rather than when the code ran.
  */
-data class StringHit(val string: Int, val velocity: Float, val delayMs: Float, val direction: StrumDirection?)
+data class StringHit(
+    val string: Int,
+    val velocity: Float,
+    val delayMs: Float,
+    val direction: StrumDirection?,
+    val timeMs: Long = 0L,
+)
 
 /**
  * Turns raw pointer positions into string hits. Pure Kotlin, so it is unit tested on the JVM.
@@ -41,7 +49,7 @@ class StrumDetector(
     fun down(pointerId: Long, y: Float, timeMs: Long): List<StringHit> {
         val string = stringAt(y)
         tracks[pointerId] = Track(y, timeMs, 0f, string ?: -1, armed = string == null)
-        return if (string != null) listOf(StringHit(string, TAP_VELOCITY, 0f, null)) else emptyList()
+        return if (string != null) listOf(StringHit(string, TAP_VELOCITY, 0f, null, timeMs)) else emptyList()
     }
 
     fun move(pointerId: Long, y: Float, timeMs: Long): List<StringHit> {
@@ -77,7 +85,7 @@ class StrumDetector(
         val spacing = maxSpacingMs - (maxSpacingMs - minSpacingMs) * ((velocity - MIN_VELOCITY) / (1f - MIN_VELOCITY))
         track.lastString = crossed.last()
         track.armed = abs(y - stringYs[track.lastString]) > pluckRadius()
-        return crossed.mapIndexed { i, s -> StringHit(s, velocity, i * spacing, direction) }
+        return crossed.mapIndexed { i, s -> StringHit(s, velocity, i * spacing, direction, timeMs) }
     }
 
     fun up(pointerId: Long) {

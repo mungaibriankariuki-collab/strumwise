@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.strumwise.app.ui.play.PlayScreen
+import com.strumwise.app.nav.StrumwiseNavHost
 import com.strumwise.app.ui.theme.StrumwiseTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         hideSystemBars()
         setContent {
             StrumwiseTheme {
-                PlayScreen(onBack = ::finish)
+                StrumwiseNavHost()
             }
         }
     }
