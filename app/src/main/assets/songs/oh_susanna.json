@@ -1,0 +1,395 @@
+{
+ "id": "oh_susanna",
+ "title": "Oh! Susanna",
+ "artist": "Stephen Foster (1848)",
+ "bpm": 100,
+ "beatsPerBar": 4,
+ "offsetMs": 2000,
+ "difficulty": "medium",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1200,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 1800,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2400,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 3000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3600,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 4200,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4800,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 5400,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 6600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 7200,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 0
+  },
+  {
+   "timeMs": 7800,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8400,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 1
+  },
+  {
+   "timeMs": 9000,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 9600,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 10200,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10800,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 11400,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 12600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13200,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 13800,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 14400,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 0
+  },
+  {
+   "timeMs": 15000,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15600,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 1
+  },
+  {
+   "timeMs": 16200,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16800,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 17400,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 18600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 19200,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 19800,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20400,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 21000,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21600,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 22200,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22800,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 23400,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 24600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25200,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 25800,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26400,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 0
+  },
+  {
+   "timeMs": 27000,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27600,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 1
+  },
+  {
+   "timeMs": 28200,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28800,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 29400,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 30600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31200,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 31800,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 32400,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 33000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33600,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 0
+  },
+  {
+   "timeMs": 34200,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 34800,
+   "type": "pluck",
+   "chord": "G7",
+   "string": 1
+  },
+  {
+   "timeMs": 35400,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 36600,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 37200,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 37800,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "id": "amazing_grace",
+ "title": "Amazing Grace",
+ "artist": "Traditional",
+ "bpm": 90,
+ "beatsPerBar": 3,
+ "offsetMs": 2000,
+ "difficulty": "easy",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4667,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 5333,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 7333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 9333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 11333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12667,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 14000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 14667,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 17333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18000,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18667,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 19333,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20667,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21333,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 23333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26667,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 29333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  }
+ ]
+}

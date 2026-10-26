@@ -1,0 +1,395 @@
+{
+ "id": "practice_am_f_c_g",
+ "title": "Four-Chord Loop: Am\u2013F\u2013C\u2013G",
+ "artist": "Strumwise practice",
+ "bpm": 80,
+ "beatsPerBar": 4,
+ "offsetMs": 2000,
+ "difficulty": "easy",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 750,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1500,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2250,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3000,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3750,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4500,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 5250,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6750,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 7500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 9000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 9750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 11250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12000,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12750,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13500,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 14250,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15000,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15750,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16500,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 17250,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18750,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 19500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 23250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24000,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24750,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25500,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26250,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27000,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27750,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28500,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 29250,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30750,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 32250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 34500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 35250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36000,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36750,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 37500,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 38250,
+   "type": "strum",
+   "chord": "Am",
+   "direction": "down"
+  },
+  {
+   "timeMs": 39000,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 39750,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 40500,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 41250,
+   "type": "strum",
+   "chord": "F",
+   "direction": "down"
+  },
+  {
+   "timeMs": 42000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 42750,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 43500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 44250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 45000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 45750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 46500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 47250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  }
+ ]
+}

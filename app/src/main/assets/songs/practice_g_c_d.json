@@ -1,0 +1,203 @@
+{
+ "id": "practice_g_c_d",
+ "title": "First Strums: G\u2013C\u2013D",
+ "artist": "Strumwise practice",
+ "bpm": 72,
+ "beatsPerBar": 4,
+ "offsetMs": 2000,
+ "difficulty": "easy",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 5000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6667,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8333,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 11667,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16667,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 23333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33333,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 35000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36667,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 38333,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 40000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 41667,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 43333,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 45000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 46667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 48333,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 50000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 51667,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  }
+ ]
+}

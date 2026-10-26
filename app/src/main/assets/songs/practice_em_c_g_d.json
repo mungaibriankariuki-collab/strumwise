@@ -1,0 +1,443 @@
+{
+ "id": "practice_em_c_g_d",
+ "title": "Campfire Groove: Em\u2013C\u2013G\u2013D",
+ "artist": "Strumwise practice",
+ "bpm": 88,
+ "beatsPerBar": 4,
+ "offsetMs": 2000,
+ "difficulty": "medium",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 682,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1364,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2045,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2727,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3409,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4091,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 4773,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 5455,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6136,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6818,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 7500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8182,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8864,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 9545,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10227,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10909,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 11591,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12273,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12955,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13636,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 14318,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15682,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16364,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 17045,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 17727,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18409,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 19091,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 19773,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20455,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21136,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21818,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22500,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22841,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "up"
+  },
+  {
+   "timeMs": 23523,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "up"
+  },
+  {
+   "timeMs": 23863,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 24545,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25227,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25568,
+   "type": "strum",
+   "chord": "C",
+   "direction": "up"
+  },
+  {
+   "timeMs": 26250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "up"
+  },
+  {
+   "timeMs": 26591,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27273,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27954,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28295,
+   "type": "strum",
+   "chord": "G",
+   "direction": "up"
+  },
+  {
+   "timeMs": 28977,
+   "type": "strum",
+   "chord": "G",
+   "direction": "up"
+  },
+  {
+   "timeMs": 29318,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30682,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31023,
+   "type": "strum",
+   "chord": "D",
+   "direction": "up"
+  },
+  {
+   "timeMs": 31704,
+   "type": "strum",
+   "chord": "D",
+   "direction": "up"
+  },
+  {
+   "timeMs": 32045,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 32727,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33409,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33750,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "up"
+  },
+  {
+   "timeMs": 34432,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "up"
+  },
+  {
+   "timeMs": 34773,
+   "type": "strum",
+   "chord": "Em",
+   "direction": "down"
+  },
+  {
+   "timeMs": 35454,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36136,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36477,
+   "type": "strum",
+   "chord": "C",
+   "direction": "up"
+  },
+  {
+   "timeMs": 37159,
+   "type": "strum",
+   "chord": "C",
+   "direction": "up"
+  },
+  {
+   "timeMs": 37500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 38182,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 38863,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 39204,
+   "type": "strum",
+   "chord": "G",
+   "direction": "up"
+  },
+  {
+   "timeMs": 39886,
+   "type": "strum",
+   "chord": "G",
+   "direction": "up"
+  },
+  {
+   "timeMs": 40227,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 40909,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 41591,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 41932,
+   "type": "strum",
+   "chord": "D",
+   "direction": "up"
+  },
+  {
+   "timeMs": 42613,
+   "type": "strum",
+   "chord": "D",
+   "direction": "up"
+  },
+  {
+   "timeMs": 42954,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  }
+ ]
+}

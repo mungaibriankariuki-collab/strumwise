@@ -1,0 +1,587 @@
+{
+ "id": "house_of_the_rising_sun",
+ "title": "House of the Rising Sun",
+ "artist": "Traditional",
+ "bpm": 180,
+ "beatsPerBar": 6,
+ "offsetMs": 2000,
+ "difficulty": "hard",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 1
+  },
+  {
+   "timeMs": 333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 1000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 4
+  },
+  {
+   "timeMs": 1333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 1667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 2000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 2333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 2667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 3000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 4
+  },
+  {
+   "timeMs": 3333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 3667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 4000,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 4333,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 4667,
+   "type": "pluck",
+   "chord": "D",
+   "string": 3
+  },
+  {
+   "timeMs": 5000,
+   "type": "pluck",
+   "chord": "D",
+   "string": 4
+  },
+  {
+   "timeMs": 5333,
+   "type": "pluck",
+   "chord": "D",
+   "string": 3
+  },
+  {
+   "timeMs": 5667,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 6000,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 6333,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 6667,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 7000,
+   "type": "pluck",
+   "chord": "F",
+   "string": 4
+  },
+  {
+   "timeMs": 7333,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 7667,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 8000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 1
+  },
+  {
+   "timeMs": 8333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 8667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 9000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 4
+  },
+  {
+   "timeMs": 9333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 9667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 10000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 10333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 10667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 11000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 4
+  },
+  {
+   "timeMs": 11333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 11667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 12000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 0
+  },
+  {
+   "timeMs": 12333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 12667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 13000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 4
+  },
+  {
+   "timeMs": 13333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 13667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 14000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 0
+  },
+  {
+   "timeMs": 14333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 14667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 15000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 4
+  },
+  {
+   "timeMs": 15333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 15667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 16000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 1
+  },
+  {
+   "timeMs": 16333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 16667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 17000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 4
+  },
+  {
+   "timeMs": 17333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 17667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 18000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 1
+  },
+  {
+   "timeMs": 18333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 18667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 19000,
+   "type": "pluck",
+   "chord": "C",
+   "string": 4
+  },
+  {
+   "timeMs": 19333,
+   "type": "pluck",
+   "chord": "C",
+   "string": 3
+  },
+  {
+   "timeMs": 19667,
+   "type": "pluck",
+   "chord": "C",
+   "string": 2
+  },
+  {
+   "timeMs": 20000,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 20333,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 20667,
+   "type": "pluck",
+   "chord": "D",
+   "string": 3
+  },
+  {
+   "timeMs": 21000,
+   "type": "pluck",
+   "chord": "D",
+   "string": 4
+  },
+  {
+   "timeMs": 21333,
+   "type": "pluck",
+   "chord": "D",
+   "string": 3
+  },
+  {
+   "timeMs": 21667,
+   "type": "pluck",
+   "chord": "D",
+   "string": 2
+  },
+  {
+   "timeMs": 22000,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 22333,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 22667,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 23000,
+   "type": "pluck",
+   "chord": "F",
+   "string": 4
+  },
+  {
+   "timeMs": 23333,
+   "type": "pluck",
+   "chord": "F",
+   "string": 3
+  },
+  {
+   "timeMs": 23667,
+   "type": "pluck",
+   "chord": "F",
+   "string": 2
+  },
+  {
+   "timeMs": 24000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 1
+  },
+  {
+   "timeMs": 24333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 24667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 25000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 4
+  },
+  {
+   "timeMs": 25333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 25667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 26000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 0
+  },
+  {
+   "timeMs": 26333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 26667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 27000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 4
+  },
+  {
+   "timeMs": 27333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 27667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 28000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 1
+  },
+  {
+   "timeMs": 28333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 28667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 29000,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 4
+  },
+  {
+   "timeMs": 29333,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 3
+  },
+  {
+   "timeMs": 29667,
+   "type": "pluck",
+   "chord": "Am",
+   "string": 2
+  },
+  {
+   "timeMs": 30000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 0
+  },
+  {
+   "timeMs": 30333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  },
+  {
+   "timeMs": 30667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 31000,
+   "type": "pluck",
+   "chord": "E",
+   "string": 4
+  },
+  {
+   "timeMs": 31333,
+   "type": "pluck",
+   "chord": "E",
+   "string": 3
+  },
+  {
+   "timeMs": 31667,
+   "type": "pluck",
+   "chord": "E",
+   "string": 2
+  }
+ ]
+}

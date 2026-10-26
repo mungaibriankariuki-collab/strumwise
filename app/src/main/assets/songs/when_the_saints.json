@@ -1,0 +1,203 @@
+{
+ "id": "when_the_saints",
+ "title": "When the Saints Go Marching In",
+ "artist": "Traditional",
+ "bpm": 96,
+ "beatsPerBar": 4,
+ "offsetMs": 2000,
+ "difficulty": "easy",
+ "events": [
+  {
+   "timeMs": 0,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 1250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 2500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 3750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 5000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 6250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 7500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 8750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 10000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 11250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 12500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 13750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 15000,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 16250,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 17500,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 18750,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 20000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 21250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 22500,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 23750,
+   "type": "strum",
+   "chord": "G7",
+   "direction": "down"
+  },
+  {
+   "timeMs": 25000,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 26250,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 27500,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 28750,
+   "type": "strum",
+   "chord": "C",
+   "direction": "down"
+  },
+  {
+   "timeMs": 30000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 31250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 32500,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 33750,
+   "type": "strum",
+   "chord": "D",
+   "direction": "down"
+  },
+  {
+   "timeMs": 35000,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 36250,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 37500,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  },
+  {
+   "timeMs": 38750,
+   "type": "strum",
+   "chord": "G",
+   "direction": "down"
+  }
+ ]
+}

@@ -12,10 +12,10 @@ class FakeGuitarEngine : GuitarEngine {
     val mutedStrings = mutableListOf<Int>()
     var mutedAll = 0
     var volume = 1f
-    var tuning: FloatArray? = null
-    var soundType = SoundType.SYNTH
+    var lastTuning: FloatArray? = null
+    var lastSoundType = SoundType.SYNTH
     var metronome: Pair<Float, Long>? = null
-    var audioTimeNanos = 0L
+    var clockNanos = 0L
     override var isRunning = false
 
     override fun start(): Boolean { isRunning = true; return true }
@@ -24,10 +24,10 @@ class FakeGuitarEngine : GuitarEngine {
     override fun muteString(string: Int) { mutedStrings += string }
     override fun muteAll() { mutedAll++ }
     override fun setMasterVolume(volume: Float) { this.volume = volume }
-    override fun setTuning(openStringHz: FloatArray) { tuning = openStringHz }
-    override fun setSoundType(type: SoundType) { soundType = type }
+    override fun setTuning(openStringHz: FloatArray) { lastTuning = openStringHz }
+    override fun setSoundType(type: SoundType) { lastSoundType = type }
     override fun setMetronome(bpm: Float, firstClickNanos: Long) { metronome = bpm to firstClickNanos }
-    override fun getAudioTimeNanos(): Long = audioTimeNanos
+    override fun getAudioTimeNanos(): Long = clockNanos
     override fun stats() = EngineStats(isRunning, 48000, 10.0, 0)
     override fun pauseForBackground() {}
     override fun resumeFromForeground() {}
