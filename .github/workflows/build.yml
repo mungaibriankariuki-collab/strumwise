@@ -1,0 +1,70 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.6.1"
+
+      - name: Unit tests (core-music, core-game)
+        run: gradle :core-music:test :core-game:test --no-daemon --stacktrace
+
+      - name: Unit + Robolectric UI tests (core-data, app)
+        run: gradle :core-data:testDebugUnitTest :app:testDebugUnitTest --no-daemon --stacktrace
+
+      - name: Restore signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          # local.properties is git-ignored; CI recreates it from repo secrets.
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > strumwise-release.jks
+            {
+              echo "strumwise.storeFile=strumwise-release.jks"
+              echo "strumwise.storePassword=$KEYSTORE_PASSWORD"
+              echo "strumwise.keyAlias=strumwise"
+              echo "strumwise.keyPassword=$KEYSTORE_PASSWORD"
+            } > local.properties
+          fi
+
+      - name: Build
+        run: gradle :app:assembleRelease :app:assembleDebug :app:assembleDebugAndroidTest --no-daemon --stacktrace
+
+      - name: Rename APKs
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk Strumwise.apk
+          cp app/build/outputs/apk/debug/app-debug.apk Strumwise-debug.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Strumwise-apk
+          path: |
+            Strumwise.apk
+            Strumwise-debug.apk
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "build-${{ github.run_number }}" Strumwise.apk Strumwise-debug.apk \
+            --title "Strumwise build ${{ github.run_number }}" \
+            --notes "Built from ${{ github.sha }}. Strumwise.apk is the signed release; Strumwise-debug.apk includes debug tooling." \
+            --latest
