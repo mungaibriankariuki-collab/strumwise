@@ -38,8 +38,21 @@
   bars). Latency calibration screen. Room stores high score / stars / plays per song. Navigation
   graph (type-safe routes), first Home and Settings screens.
 
+- **Phase 5 — app shell**: Home (Play guitar / Songs / Settings), Settings (volume + test strum,
+  tuning, left-handed, haptics, string vibration, calibration offset + calibrate, synth/samples),
+  navigation graph, original identity (spruce/rosewood drawn with gradients, grain paths and seeded
+  pore noise; lagoon-teal accent with ember/gold), adaptive vector icon (teal pick swept by three
+  strings, with monochrome layer), SplashScreen API launch theme.
+- **Phase 6 — quality & release prep**: allocation-free marker drawing (binary-searched visible
+  window, cached chord strings), draw-phase-only state reads; hidden dev menu (tap the title 7x) with
+  a debug overlay: fps/jank, sample rate, Oboe output latency, xruns, and (debug builds) mic-loopback
+  round-trip latency logged under `StrumwiseLatency`; R8 rules for JNI; release signing from
+  local.properties; accessibility labels/state on controls and live score; README; TODO hooks for
+  AdMob banner/interstitial and Play Billing (remove ads / unlock songs); instrumented UI test.
+
 ## Next
-- Phase 5: app shell polish (home, settings, splash screen, adaptive icon, wood identity).
+- All phases done. Possible follow-ups: bundle licensed guitar samples, judge strum direction,
+  more songs, emulator job in CI for instrumented tests.
 
 ## Decisions
 - **Builds run on GitHub Actions.** The dev machine is a phone (Termux/proot, no Android SDK),
@@ -75,3 +88,5 @@
 - Stars: 3 at >=90% accuracy, 2 at >=70%, else 1. Accuracy = (Perfect + Good/2) / notes.
 - Practice runs (speed < 100% or looping) count as plays but never set high scores.
 - Room was added in Phase 4 (instead of 5) because results need the stored best.
+- RECORD_AUDIO is declared only in the debug manifest; release builds never ask for the mic.
+- The dev menu is reached by tapping the Home title seven times (like Android's build number).

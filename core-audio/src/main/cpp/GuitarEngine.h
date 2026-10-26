@@ -19,6 +19,7 @@
 #include <vector>
 
 #include "KarplusStrongVoice.h"
+#include "LatencyProbe.h"
 #include "LockFreeQueue.h"
 #include "MasterBus.h"
 #include "SampleVoice.h"
@@ -53,6 +54,14 @@ public:
     void setMetronome(float bpm, int64_t firstClickNanos, int beatsPerBar);
     /** Takes ownership and publishes atomically; the previous bank is kept alive until destruction. */
     void setSampleBank(std::unique_ptr<SampleBank> bank);
+
+    // ---- Developer: round-trip latency (needs RECORD_AUDIO) ----
+    bool startLatencyProbe();
+    void stopLatencyProbe();
+    /** Emits one test pulse; the probe times its return through the microphone. */
+    void firePulse() { pulseRequested_.store(true, std::memory_order_release); }
+    /** Milliseconds for the last pulse, or -1 while waiting. */
+    double probeResultMillis() const;
 
     // ---- Queries ----
     /** Monotonic audio clock: nanoseconds of audio *presented* at the speaker since the engine started. */
@@ -136,6 +145,12 @@ private:
     std::atomic<int64_t> lastAudioTimeNanos_{0}; // keeps the clock monotonic across readers/streams
     std::atomic<int32_t> sampleRate_{48000};
     std::atomic<bool> running_{false};
+
+    LatencyProbe probe_;
+    std::mutex probeMutex_;
+    std::atomic<bool> pulseRequested_{false};
+    int pulseRemaining_ = 0;    // audio thread
+    float pulsePhase_ = 0.0f;   // audio thread
 };
 
 }  // namespace strumwise

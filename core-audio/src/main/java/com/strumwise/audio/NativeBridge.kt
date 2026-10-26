@@ -22,5 +22,9 @@ internal object NativeBridge {
     external fun sampleRate(handle: Long): Int
     external fun outputLatencyMillis(handle: Long): Double
     external fun underrunCount(handle: Long): Int
+    external fun startLatencyProbe(handle: Long): Boolean
+    external fun stopLatencyProbe(handle: Long)
+    external fun firePulse(handle: Long)
+    external fun probeResultMillis(handle: Long): Double
     external fun loadSamples(handle: Long, wavFiles: Array<ByteArray>, rootHz: FloatArray): Int
 }

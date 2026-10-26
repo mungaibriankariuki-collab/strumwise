@@ -15,8 +15,8 @@ data class Chord(val id: String, val displayName: String, val frets: List<Int?>)
 
     fun isMuted(string: Int): Boolean = frets[string] == null
 
-    /** Strings that sound, in low-to-high order. */
-    val playedStrings: List<Int> get() = frets.indices.filter { frets[it] != null }
+    /** Strings that sound, in low-to-high order. Computed once: the game reads it every frame. */
+    val playedStrings: List<Int> = frets.indices.filter { frets[it] != null }
 
     /** MIDI notes of the sounding strings (low to high) in a tuning. */
     fun midiNotes(tuning: Tuning = Tuning.STANDARD): List<Int> =

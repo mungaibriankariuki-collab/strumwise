@@ -46,6 +46,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.strumwise.app.monetization.AdBannerSlot
 import com.strumwise.app.nav.GameRoute
 import com.strumwise.app.ui.theme.StrumColors
 import com.strumwise.game.Difficulty
@@ -70,9 +71,12 @@ fun SongListContent(state: SongListState, onBack: () -> Unit, onPlay: (GameRoute
         if (state.loading) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
         } else {
-            LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxSize()) {
+            LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.weight(1f)) {
+                // TODO(billing): show a lock and route to Purchases.launchPurchase for songs where
+                //  Purchases.isSongUnlocked(id) is false. Every song is unlocked today.
                 items(state.songs, key = { it.chart.id }) { item -> SongRow(item) { chosen = item } }
             }
+            AdBannerSlot(Modifier.fillMaxWidth())
         }
     }
     chosen?.let { item ->

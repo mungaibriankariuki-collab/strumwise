@@ -100,6 +100,26 @@ Java_com_strumwise_audio_NativeBridge_underrunCount(JNIEnv *, jobject, jlong han
     return engine(handle)->underrunCount();
 }
 
+JNIEXPORT jboolean JNICALL
+Java_com_strumwise_audio_NativeBridge_startLatencyProbe(JNIEnv *, jobject, jlong handle) {
+    return engine(handle)->startLatencyProbe() ? JNI_TRUE : JNI_FALSE;
+}
+
+JNIEXPORT void JNICALL
+Java_com_strumwise_audio_NativeBridge_stopLatencyProbe(JNIEnv *, jobject, jlong handle) {
+    engine(handle)->stopLatencyProbe();
+}
+
+JNIEXPORT void JNICALL
+Java_com_strumwise_audio_NativeBridge_firePulse(JNIEnv *, jobject, jlong handle) {
+    engine(handle)->firePulse();
+}
+
+JNIEXPORT jdouble JNICALL
+Java_com_strumwise_audio_NativeBridge_probeResultMillis(JNIEnv *, jobject, jlong handle) {
+    return engine(handle)->probeResultMillis();
+}
+
 /**
  * Decodes WAV files (raw bytes read from assets on the Kotlin side) into a new sample bank and
  * publishes it. Runs on a background Kotlin thread. Returns the number of samples accepted.

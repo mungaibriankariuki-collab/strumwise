@@ -1,6 +1,8 @@
 package com.strumwise.app.nav
 
+import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -10,6 +12,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.strumwise.app.monetization.Ads
+import com.strumwise.app.monetization.InterstitialSlot
 import com.strumwise.app.ui.calibration.CalibrationScreen
 import com.strumwise.app.ui.dev.DevMenuDialog
 import com.strumwise.app.ui.game.GameScreen
@@ -46,6 +50,9 @@ fun StrumwiseNavHost(nav: NavHostController = rememberNavController()) {
         }
         composable<ResultsRoute> { entry ->
             val results = entry.toRoute<ResultsRoute>()
+            val activity = LocalActivity.current
+            // TODO hook: interstitial after a song (no-op until ads are implemented).
+            LaunchedEffect(results) { Ads.maybeShowInterstitial(activity, InterstitialSlot.AFTER_RESULTS) }
             ResultsScreen(
                 result = results,
                 songTitle = results.title,

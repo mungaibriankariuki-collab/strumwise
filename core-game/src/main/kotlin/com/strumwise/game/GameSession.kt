@@ -93,7 +93,28 @@ class GameSession(
 
     /** Notes from [behindMs] in the past to [aheadMs] in the future, for drawing markers. */
     fun visibleNotes(nowMs: Double, aheadMs: Double, behindMs: Double = 250.0): List<Note> =
-        playable.filter { it.timeMs >= nowMs - behindMs && it.timeMs <= nowMs + aheadMs }
+        ArrayList<Note>().also { list -> forEachVisibleNote(nowMs, aheadMs, behindMs) { list += it } }
+
+    /**
+     * Allocation-free version of [visibleNotes] for the draw loop: binary-searches the first note in
+     * the window and walks forward until past it.
+     */
+    inline fun forEachVisibleNote(nowMs: Double, aheadMs: Double, behindMs: Double, action: (Note) -> Unit) {
+        val sorted = playableNotes
+        var lo = 0
+        var hi = sorted.size
+        val from = nowMs - behindMs
+        while (lo < hi) {
+            val mid = (lo + hi) ushr 1
+            if (sorted[mid].timeMs < from) lo = mid + 1 else hi = mid
+        }
+        val to = nowMs + aheadMs
+        var i = lo
+        while (i < sorted.size && sorted[i].timeMs <= to) action(sorted[i++])
+    }
+
+    /** Playable notes sorted by time (exposed for the inline [forEachVisibleNote]). */
+    @PublishedApi internal val playableNotes: List<Note> get() = playable
 
     fun resultOf(note: Note): Judgment? = results[note.index]
 

@@ -73,6 +73,37 @@ class OboeGuitarEngine : GuitarEngine {
     )
 
     /**
+     * Developer tool: measures app-to-app round-trip latency by playing short pulses and timing their
+     * return through the microphone. Requires RECORD_AUDIO and a quiet room; blocking, so call it from
+     * a background dispatcher. Returns the median of [pulses] measurements in ms, or null if none
+     * came back (e.g. headphones, or the mic couldn't hear the speaker).
+     */
+    fun measureRoundTripMillis(pulses: Int = 5): Double? {
+        if (!NativeBridge.startLatencyProbe(handle)) return null
+        try {
+            Thread.sleep(300) // let the input stream settle and learn the noise floor
+            val results = ArrayList<Double>()
+            repeat(pulses) {
+                NativeBridge.firePulse(handle)
+                val deadline = System.nanoTime() + 1_000_000_000L
+                var ms = -1.0
+                while (System.nanoTime() < deadline) {
+                    Thread.sleep(10)
+                    ms = NativeBridge.probeResultMillis(handle)
+                    if (ms >= 0) break
+                }
+                if (ms >= 0) results += ms
+                Thread.sleep(250) // let the room go quiet before the next pulse
+            }
+            val median = results.sorted().getOrNull(results.size / 2)
+            Log.i(TAG, "Round-trip latency: ${results.joinToString { "%.1f".format(it) }} ms -> median $median")
+            return median
+        } finally {
+            NativeBridge.stopLatencyProbe(handle)
+        }
+    }
+
+    /**
      * Loads every `assets/samples/<midi>.wav` (16-bit PCM) into the sample voice bank. The file name is
      * the MIDI note the sample was recorded at, e.g. `40.wav` = E2. Blocking: call off the main thread.
      * Returns how many samples were accepted (0 means [SoundType.SAMPLES] will fall back to synthesis).

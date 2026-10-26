@@ -209,6 +209,26 @@ void GuitarEngine::setSampleBank(std::unique_ptr<SampleBank> bank) {
 }
 
 // -------------------------------------------------------------------------------------------------
+// Developer latency probe
+// -------------------------------------------------------------------------------------------------
+
+bool GuitarEngine::startLatencyProbe() {
+    std::lock_guard<std::mutex> lock(probeMutex_);
+    probe_.close();
+    return probe_.open();
+}
+
+void GuitarEngine::stopLatencyProbe() {
+    std::lock_guard<std::mutex> lock(probeMutex_);
+    probe_.close();
+}
+
+double GuitarEngine::probeResultMillis() const {
+    const int64_t nanos = probe_.resultNanos();
+    return nanos < 0 ? -1.0 : static_cast<double>(nanos) / 1e6;
+}
+
+// -------------------------------------------------------------------------------------------------
 // Clock
 // -------------------------------------------------------------------------------------------------
 
@@ -431,6 +451,14 @@ void GuitarEngine::renderChunk(float *out, int channels, int frames, int64_t sta
     }
 
     const double interval = metronomeBpm_ > 0.0f ? static_cast<double>(sampleRate()) * 60.0 / metronomeBpm_ : 0.0;
+    const auto rate = static_cast<float>(sampleRate());
+    if (pulseRequested_.exchange(false, std::memory_order_acq_rel)) {
+        // The pulse's first sample is this chunk's first sample; tell the probe when that was written.
+        pulseRemaining_ = static_cast<int>(0.004f * rate);
+        pulsePhase_ = 0.0f;
+        const auto chunkOffset = static_cast<int64_t>(static_cast<double>(startFrame - framesWritten_) * 1e9 / rate);
+        probe_.arm(monotonicNanos() + chunkOffset);
+    }
     for (int i = 0; i < frames; ++i) {
         float l = bodyL_.process(mixL_[i] * kMixGain);
         float r = bodyR_.process(mixR_[i] * kMixGain);
@@ -449,6 +477,15 @@ void GuitarEngine::renderChunk(float *out, int channels, int frames, int64_t sta
         l *= volume_;
         r *= volume_;
         limiter_.process(l, r);
+
+        if (pulseRemaining_ > 0) {
+            // 4 ms, 2 kHz burst: short, loud and easy to find in the mic signal.
+            const float p = 0.7f * std::sin(pulsePhase_);
+            pulsePhase_ += 2.0f * kPi * 2000.0f / rate;
+            --pulseRemaining_;
+            l = p;
+            r = p;
+        }
 
         if (channels == 1) {
             out[i] = 0.5f * (l + r);

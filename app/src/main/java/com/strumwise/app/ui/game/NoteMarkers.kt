@@ -45,12 +45,12 @@ fun DrawScope.drawNoteMarkers(
     drawLine(StrumColors.Lagoon.copy(alpha = 0.25f), Offset(layout.hitLineX, top), Offset(layout.hitLineX, bottom), 14f * d)
     drawLine(StrumColors.Lagoon, Offset(layout.hitLineX, top), Offset(layout.hitLineX, bottom), 3f * d)
 
-    for (note in session.visibleNotes(nowMs, LOOKAHEAD_MS * speed, behindMs = 300.0 * speed)) {
+    session.forEachVisibleNote(nowMs, LOOKAHEAD_MS * speed, behindMs = 300.0 * speed) { note ->
         val result = session.resultOf(note)
-        if (result == Judgment.PERFECT || result == Judgment.GOOD) continue  // hit notes vanish
+        if (result == Judgment.PERFECT || result == Judgment.GOOD) return@forEachVisibleNote  // hit notes vanish
         val dtReal = (note.timeMs - nowMs) / speed
         val x = (layout.hitLineX - dtReal / LOOKAHEAD_MS * travel).toFloat()
-        if (x < layout.nutX - 20 * d) continue
+        if (x < layout.nutX - 20 * d) return@forEachVisibleNote
         // Fade in as markers come over the nut.
         val fade = ((x - layout.nutX) / (travel * 0.15f)).coerceIn(0f, 1f)
         val missed = result == Judgment.MISS
@@ -92,7 +92,7 @@ fun DrawScope.drawNoteMarkers(
                 }
             }
             EventType.PLUCK -> {
-                val s = event.string ?: continue
+                val s = event.string ?: return@forEachVisibleNote
                 val y = layout.stringYs[s]
                 val r = layout.stringSpacing * 0.32f
                 val color = if (missed) StrumColors.Miss else StrumColors.Ember
