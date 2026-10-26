@@ -20,7 +20,12 @@ class GameSession(
     private val calibrationOffsetMs: Int = 0,
 ) {
     val notes: List<Note> = chart.notes()
-    private val judge = HitJudge(notes).also { it.speed = practice.speed }
+
+    /** Notes this run actually plays: just the loop section when looping. */
+    private val playable: List<Note> = practice.loop?.let { loop -> notes.filter { it.timeMs in loop.startMs..loop.endMs } }
+        ?.takeIf { it.isNotEmpty() } ?: notes
+
+    private val judge = HitJudge(playable).also { it.speed = practice.speed }
     val score = ScoreKeeper()
 
     /** Judgment per note index, for colouring/hiding markers. */
@@ -28,14 +33,12 @@ class GameSession(
 
     val countInBeats: Int = maxOf(3, chart.beatsPerBar)
 
-    private val firstNoteMs: Long = practice.loop?.startMs?.let { start ->
-        notes.firstOrNull { it.timeMs >= start }?.timeMs
-    } ?: notes.first().timeMs
+    private val firstNoteMs: Long = playable.first().timeMs
 
     /** Song time the clock starts from: a count-in before the first note to play. */
     val startMs: Double = firstNoteMs - countInBeats * chart.beatMs
 
-    private val endMs: Double = notes.last().timeMs + END_PADDING_MS
+    private val endMs: Double = playable.last().timeMs + END_PADDING_MS
 
     var finished = false
         private set
@@ -90,13 +93,13 @@ class GameSession(
 
     /** Notes from [behindMs] in the past to [aheadMs] in the future, for drawing markers. */
     fun visibleNotes(nowMs: Double, aheadMs: Double, behindMs: Double = 250.0): List<Note> =
-        notes.filter { it.timeMs >= nowMs - behindMs && it.timeMs <= nowMs + aheadMs }
+        playable.filter { it.timeMs >= nowMs - behindMs && it.timeMs <= nowMs + aheadMs }
 
     fun resultOf(note: Note): Judgment? = results[note.index]
 
     /** The next chord the player will need (for highlighting its button). */
     fun upcomingChord(nowMs: Double): String? =
-        notes.firstOrNull { it.timeMs >= nowMs - Windows.GOOD_MS && results[it.index] == null }?.event?.chord
+        playable.firstOrNull { it.timeMs >= nowMs - Windows.GOOD_MS && results[it.index] == null }?.event?.chord
 
     fun result(previousBest: Long?): GameResult {
         val isNewHigh = !practice.isPractice && score.score > 0 && (previousBest == null || score.score > previousBest)

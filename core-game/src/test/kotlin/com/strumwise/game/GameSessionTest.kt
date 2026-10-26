@@ -49,7 +49,8 @@ class GameSessionTest {
     @Test fun unplayedNotesAreMissedAndShownAsSuch() {
         val s = GameSession(chart, clock)
         s.start()
-        setSongMs(s, 1600.0)
+        // At 1550 the first note (1000) is long gone; the second (1500) is only 50 ms late — still playable.
+        setSongMs(s, 1550.0)
         val u = s.update()
         assertThat(u.feedback.map { it.result.judgment }).containsExactly(Judgment.MISS)
         assertThat(s.resultOf(s.notes[0])).isEqualTo(Judgment.MISS)
@@ -115,6 +116,8 @@ class GameSessionTest {
         setSongMs(s, 1500.0)
         assertThat(s.onInput(nanos, "G", all, true)!!.result.judgment).isEqualTo(Judgment.PERFECT)
         assertThat(s.score.combo).isEqualTo(3)
+        // Notes outside the loop are never shown or judged.
+        assertThat(s.visibleNotes(0.0, aheadMs = 5000.0).map { it.timeMs }).containsExactly(1500L, 2000L)
     }
 
     @Test fun upcomingChordFollowsTheChart() {
