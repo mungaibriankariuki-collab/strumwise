@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(oboe REQUIRED CONFIG)
 
 add_library(strumwise_audio SHARED
+        GuitarEngine.cpp
         jni_bridge.cpp)
 
 target_compile_options(strumwise_audio PRIVATE -Wall -Wextra -O3 -ffast-math)

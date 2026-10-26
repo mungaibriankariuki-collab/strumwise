@@ -41,7 +41,7 @@ android {
 
 dependencies {
     implementation(libs.oboe)
-    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.process)
     testImplementation(libs.junit)
     testImplementation(libs.truth)
 }

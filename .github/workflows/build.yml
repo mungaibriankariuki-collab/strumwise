@@ -26,8 +26,8 @@ jobs:
       - name: Unit tests (core-music, core-game)
         run: gradle :core-music:test :core-game:test --no-daemon --stacktrace
 
-      - name: Unit + Robolectric UI tests (core-data, app)
-        run: gradle :core-data:testDebugUnitTest :app:testDebugUnitTest --no-daemon --stacktrace
+      - name: Unit + Robolectric UI tests (core-audio, core-data, app)
+        run: gradle :core-audio:testDebugUnitTest :core-data:testDebugUnitTest :app:testDebugUnitTest --no-daemon --stacktrace
 
       - name: Restore signing key
         env:
