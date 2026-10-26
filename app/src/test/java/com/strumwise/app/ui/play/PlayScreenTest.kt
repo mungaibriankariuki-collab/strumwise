@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.longClick
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -58,7 +59,8 @@ class PlayScreenTest {
         show()
         compose.onNodeWithContentDescription("Chord C").performClick()
         assertThat(tapped).containsExactly(state.slots.indexOfFirst { it.id == "C" })
-        compose.onNodeWithText("C", substring = false, useUnmergedTree = true).assertIsDisplayed()
+        // The chord's name now also shows in the top bar.
+        assertThat(compose.onAllNodesWithText("C", useUnmergedTree = true).fetchSemanticsNodes().size).isEqualTo(2)
     }
 
     @Test fun longPressOpensSwap() {
