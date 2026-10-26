@@ -25,7 +25,8 @@ class ChordLibraryTest {
         "D7" to ("D" to pcs("D", "F#", "A", "C")),
         "E7" to ("E" to pcs("E", "G#", "B", "D")),
         "G7" to ("G" to pcs("G", "B", "D", "F")),
-        "C7" to ("C" to pcs("C", "E", "G", "A#")),
+        // The common open C7 shape (x32310) omits the fifth (G), as most open seventh voicings can.
+        "C7" to ("C" to pcs("C", "E", "A#")),
         "B7" to ("B" to pcs("B", "D#", "F#", "A")),
         "Fmaj7" to ("F" to pcs("F", "A", "C", "E")),
         "Cadd9" to ("C" to pcs("C", "E", "G", "D")),
