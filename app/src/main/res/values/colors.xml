@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="espresso">#FF17110E</color>
+    <color name="espresso_raised">#FF241A15</color>
+    <color name="lagoon">#FF2CCFC0</color>
+    <color name="cream">#FFF7EBD7</color>
+    <color name="icon_background">#FF2A1C14</color>
+</resources>

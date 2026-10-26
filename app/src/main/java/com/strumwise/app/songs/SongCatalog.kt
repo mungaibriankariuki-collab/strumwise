@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 /** Loads every chart in assets/songs/ once. Invalid charts are logged and skipped. */
 @Singleton
-class SongCatalog @Inject constructor(@ApplicationContext private val context: Context) {
+class SongCatalog @Inject constructor(@param:ApplicationContext private val context: Context) {
     private val mutex = Mutex()
     private var cache: List<SongChart>? = null
 

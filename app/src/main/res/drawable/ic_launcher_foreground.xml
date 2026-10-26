@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Strumwise mark: a lagoon-teal pick swept by three strings. Kept inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Pick shadow -->
+    <path
+        android:fillColor="#55000000"
+        android:pathData="M55.5,29 C70,29 79,36 79,47 C79,61 65,76 55.5,82 C46,76 32,61 32,47 C32,36 41,29 55.5,29 Z" />
+    <!-- Pick -->
+    <path
+        android:fillColor="@color/lagoon"
+        android:pathData="M54,27 C68.5,27 77.5,34 77.5,45 C77.5,59 63.5,74 54,80 C44.5,74 30.5,59 30.5,45 C30.5,34 39.5,27 54,27 Z" />
+    <!-- Highlight -->
+    <path
+        android:fillColor="#40FFFFFF"
+        android:pathData="M54,31 C64,31 71,35.5 72.5,42 C66,37.5 60,36 54,36 C48,36 42,37.5 35.5,42 C37,35.5 44,31 54,31 Z" />
+    <!-- Strings -->
+    <path android:strokeColor="@color/cream" android:strokeWidth="2.6" android:strokeLineCap="round"
+        android:pathData="M24,47 Q54,40 84,47" />
+    <path android:strokeColor="@color/cream" android:strokeWidth="2" android:strokeLineCap="round"
+        android:pathData="M24,55 Q54,48 84,55" />
+    <path android:strokeColor="@color/cream" android:strokeWidth="1.5" android:strokeLineCap="round"
+        android:pathData="M24,63 Q54,56 84,63" />
+</vector>

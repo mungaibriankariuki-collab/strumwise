@@ -6,6 +6,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PointMode
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -54,8 +55,22 @@ class GuitarArt(val layout: GuitarLayout, private val density: Float) {
         }
     }
 
+    /**
+     * Wood noise: thousands of tiny pores/specks scattered with a seeded RNG, drawn in one
+     * drawPoints call each. Gives the gradients a real-wood texture at almost no cost.
+     */
+    private val topSpecks: List<Offset> = run {
+        val random = Random(77)
+        List(1600) { Offset(random.nextFloat() * w, random.nextFloat() * h) }
+    }
+
     private val boardTop = layout.stringTop - layout.stringSpacing * 0.7f
     private val boardBottom = layout.stringBottom + layout.stringSpacing * 0.7f
+    private val boardPores: List<Offset> = run {
+        val random = Random(31)
+        List(900) { Offset(random.nextFloat() * layout.fretboardEndX, boardTop + random.nextFloat() * (boardBottom - boardTop)) }
+    }
+
     private val boardBrush = Brush.verticalGradient(
         0f to StrumColors.RosewoodLight, 0.5f to StrumColors.RosewoodDark, 1f to StrumColors.RosewoodLight,
         startY = boardTop, endY = boardBottom,
@@ -75,6 +90,7 @@ class GuitarArt(val layout: GuitarLayout, private val density: Float) {
     fun drawBody(scope: DrawScope) = with(scope) {
         drawRect(topBrush)
         for ((path, alpha) in grain) drawPath(path, StrumColors.Grain.copy(alpha = alpha), style = Stroke(width = density))
+        drawPoints(topSpecks, PointMode.Points, StrumColors.Grain.copy(alpha = 0.18f), strokeWidth = 1.2f * density, cap = StrokeCap.Round)
         drawRect(glowBrush)
         // Binding along the top and bottom edges suggests the body's outline.
         drawRect(StrumColors.Binding, size = Size(w, h * 0.025f))
@@ -105,6 +121,7 @@ class GuitarArt(val layout: GuitarLayout, private val density: Float) {
 
     fun drawFretboard(scope: DrawScope, chord: Chord?, highlightFrets: Boolean) = with(scope) {
         drawRect(boardBrush, topLeft = Offset(0f, boardTop), size = Size(layout.fretboardEndX, boardBottom - boardTop))
+        drawPoints(boardPores, PointMode.Points, Color(0x1FFFE2C0), strokeWidth = 1.4f * density, cap = StrokeCap.Round)
         // Inlay dots.
         val midY = (boardTop + boardBottom) / 2f
         for (f in 1..GuitarLayout.VISIBLE_FRETS) {
